@@ -1,0 +1,21 @@
+doctype 5
+html
+	head
+		meta(http-equiv="Content-Type", content="text/html", charset="utf-8")
+		title: block titulo
+		link(href=url_for('static', filename=''))
+	body
+		header.row
+			block header
+
+		#contenido.row
+			aside#sidebar.four.colums
+				block sidebar
+			main.eight.columns
+				block contenido
+
+		footer.row
+			block footer
+
+		for script in scripts
+			script(src="url_for(filename='#{script}')")
