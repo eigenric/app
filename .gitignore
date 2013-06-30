@@ -1,2 +1,5 @@
+*.jpg
+*.png
+*.db
 venv
 *.pyc
