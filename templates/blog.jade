@@ -1,0 +1,29 @@
+extends base
+
+block title
+	| Ricardo
+
+block contenido
+	.row
+		.large-9.columns(role='content')
+			article
+
+				h3: a(href='#') Titulo del articulo
+				h6 Escrito por 
+					a(href='#') Autor del articulo
+
+				p.
+					Contenido del articulo
+					
+
+		aside.large-3.columns
+			h5 Categories
+			
+			ul.side-nav
+				for url in ['News', 'Code', 'Design', 'Fun', 'Weasels']
+					li: a(href='#') #{url}
+
+			.panel
+				h5 Featured
+				p Prok drumstick turkey fugiat. Trip-tip elit turducken pork chop in. Swine short
+				a(href='#') Read More

@@ -1,21 +1,56 @@
-doctype 5
-html
+!!! 5
+html.js.no-touch.svg.inlinesvg.svgclippaths.no-ie8compat(lang='es')
 	head
-		meta(http-equiv="Content-Type", content="text/html", charset="utf-8")
-		title: block titulo
-		link(href=url_for('static', filename='foundation/css/foundation.css'))
+		meta(http-equiv='Content-Type', content='text/html', charset='UTF-8')
+		meta(charset='utf-8')
+		meta(name='viewport', content-width='device-width')
+		title: block title
+		link(rel='stylesheet',href='/static/css/normalize.css')
+		link(rel='stylesheet', href='/static/css/foundation.css')
+		script(src='static/js/modernizr.foundation.js')
 	body
-		header.row
-			block header
+		.row
+			.large-12.columns
+				.nav-bar.right
+					ul.button-group
+						li: a(href="#").button Link 1
+						li: a(href="#").button Link 2
+						li: a(href="#").button Link 3
+						li: a(href="#").button Link 4
 
-		#contenido.row
-			aside#sidebar.four.colums
-				block sidebar
-			main.eight.columns
-				block contenido
+				h1 Blog 
+					small This is my blog
+			hr
+
+
+		block contenido
 
 		footer.row
-			block footer
+			.large-12.columns
+				hr
+					.row
+						.large-6.columns
+							p Copyright no one at all. Go to town.
+						.large-6-columns
+							ul.inline-list.right
+							for i in [1,2,3,4]
+								li: a(href='#') Link #{i}
 
-		for script in scripts
-			script(src=url_for('static',filename=script))
+		script(src='static/js/app.js')
+		script(src='static/js/foundation.min.js')
+		script(src='static/js/jquery.js')		
+		script(src='static/js/jquery.foundation.accordion.js')
+		script(src='static/js/jquery.foundation.alerts.js')
+		script(src='static/js/jquery.foundation.buttons.js')
+		script(src='static/js/jquery.foundation.clearing.js')
+		script(src='static/js/jquery.foundation.forms.js')
+		script(src='static/js/jquery.foundation.joyride.js')
+		script(src='static/js/jquery.foundation.magellan.js')
+		script(src='static/js/jquery.foundation.mediaQueryToggle.js')
+		script(src='static/js/jquery.foundation.navigation.js')
+		script(src='static/js/jquery.foundation.orbit.js')
+		script(src='static/js/jquery.foundation.reveal.js')
+		script(src='static/js/jquery.foundation.tabs.js')
+		script(src='static/js/jquery.foundation.tooltips.js')
+		script(src='static/js/jquery.foundation.topbar.js')
+		script(src='static/js/jquery.placeholder.js')
